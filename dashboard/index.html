@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Economic Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+
+    <header class="site-header">
+      <div class="header-brand">
+        <h1>US Economic Dashboard</h1>
+        <span class="header-source">FRED · St. Louis Fed</span>
+      </div>
+      <div class="header-meta">
+        <span class="meta-label">Updated</span>
+        <span id="updated-at" class="meta-value mono">—</span>
+      </div>
+    </header>
+
+    <nav class="domain-nav" role="tablist">
+      <button class="tab-btn" data-domain="housing"    role="tab">Housing</button>
+      <button class="tab-btn" data-domain="labor"      role="tab">Labor</button>
+      <button class="tab-btn" data-domain="rates"      role="tab">Rates</button>
+      <button class="tab-btn" data-domain="gdp_income" role="tab">GDP &amp; Income</button>
+    </nav>
+
+    <section class="kpi-section" aria-label="Key indicators">
+      <div id="kpi-cards" class="kpi-grid"></div>
+    </section>
+
+    <section class="chart-section" aria-label="Chart">
+      <div class="chart-controls">
+        <div id="series-checkboxes" class="series-checkboxes"></div>
+        <div class="window-buttons" role="group" aria-label="Time window">
+          <button class="win-btn" data-window="2yr">2Y</button>
+          <button class="win-btn" data-window="5yr">5Y</button>
+          <button class="win-btn" data-window="all">All</button>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="main-chart"></canvas>
+      </div>
+      <p id="chart-note" class="chart-note"></p>
+    </section>
+
+    <footer class="site-footer">
+      <span>Data: <a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED / St. Louis Fed</a></span>
+      <span class="footer-sep">·</span>
+      <span><a href="https://github.com/DanielDiebel/econ-dashboard" target="_blank" rel="noopener">GitHub</a></span>
+      <span class="footer-sep">·</span>
+      <span>Updated daily via GitHub Actions</span>
+    </footer>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
