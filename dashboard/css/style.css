@@ -447,6 +447,175 @@ a:hover { color: var(--text-1); }
 .release-today  { color: var(--up); }
 .release-soon   { color: var(--text-2); }
 
+/* ── About button (footer) ──────────────────────────────────────────────────── */
+.about-trigger {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--text-4);
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+.about-trigger:hover { color: var(--text-1); }
+
+/* ── About modal ────────────────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(1, 4, 9, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.modal-overlay[hidden] { display: none; }
+
+.modal {
+  background: #161b22;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem 0;
+}
+
+.modal-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-1);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-3);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  line-height: 0;
+  transition: color 0.15s, background 0.15s;
+}
+.modal-close:hover { color: var(--text-1); background: var(--bg-input); }
+
+.modal-body {
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.modal-desc {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.modal-section {
+  margin-bottom: 1.25rem;
+}
+
+.modal-section h3 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-4);
+  margin-bottom: 0.5rem;
+}
+
+.modal-section p {
+  font-size: 0.82rem;
+  color: var(--text-2);
+}
+
+.modal-note {
+  font-size: 0.75rem !important;
+  color: var(--text-3) !important;
+}
+
+.modal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.modal-list li {
+  font-size: 0.82rem;
+  color: var(--text-3);
+}
+
+.modal-list a { color: var(--text-2); }
+.modal-list a:hover { color: var(--text-1); }
+
+.cal-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.5rem 0.6rem;
+}
+
+.cal-url {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-3);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--text-3);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.copy-btn:hover { color: var(--text-1); border-color: var(--text-3); }
+.copy-btn.copied { color: var(--up); border-color: var(--up); }
+
+.modal-footer-links {
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-sub);
+  margin-bottom: 0 !important;
+}
+
+.modal-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--text-3);
+}
+.modal-footer-links a:hover { color: var(--text-1); }
+
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 .site-footer {
   display: flex;

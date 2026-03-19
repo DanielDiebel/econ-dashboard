@@ -1,7 +1,7 @@
 # CLAUDE.md — Econ Dashboard State
 
 ## Last updated: 2026-03-18
-## Last session: Phase 4 — Apple Calendar Notifications
+## Last session: Phase 6 — Documentation + Public Launch
 
 ---
 
@@ -27,14 +27,35 @@
 - [x] `scripts/build_release_calendar.py` — fetches upcoming FRED release dates, writes JSON + iCal
 - [x] `dashboard/data/release_calendar.json` — upcoming releases for dashboard panel
 - [x] `dashboard/release-calendar.ics` — iCal subscription file for Apple Calendar
+- [x] `index.html` — root redirect to `./dashboard/` (GitHub Pages root fix)
+- [x] `README.md` — public-launch quality with pipeline diagram, fork instructions, data sources
+- [x] `docs/architecture.md` — full system documentation
+- [x] `LICENSE` — MIT, Daniel Diebel 2026
+- [x] About modal in dashboard — data sources, update schedule, iCal copy button, GitHub link
 
 ## What's in progress
-- [ ] Phase 5: BLS / BEA / Census Layers
+- Nothing — project is fully launched
 
-## What comes next (Phase 5)
-- [ ] BLS API integration (detailed jobs data)
-- [ ] BEA API integration (regional GDP, etc.)
-- [ ] Census API integration (housing permits detail)
+## Maintenance guide
+### Adding a new FRED series
+1. Add to `SERIES` dict in `scripts/fetch_fred.py` (single source of truth)
+2. Assign a `category` matching an existing domain key (`housing`, `labor`, `rates`, `gdp_income`)
+3. Run pipeline locally; verify in `dashboard_data.json`
+4. Commit both JSON files
+
+### Modifying the dashboard layout
+- KPI cards: `renderKpiCards()` in `dashboard/js/app.js`
+- Chart: `renderChart()` and `DEFAULT_SELECTED` in `app.js`
+- Styles: `dashboard/css/style.css` — CSS custom properties at top for colours/spacing
+
+### Debugging GitHub Actions
+- Go to repo → Actions tab → click failed run → expand failed step
+- Most common issues: stale `FRED_API_KEY` secret (regenerate at fred.stlouisfed.org/docs/api/api_key.html), API rate limit (retry manually)
+- Force a fresh run: Actions tab → "Fetch FRED Data" → "Run workflow"
+
+### Updating release IDs
+- FRED release IDs in `scripts/build_release_calendar.py` → `RELEASES` dict
+- Find IDs at fred.stlouisfed.org/releases
 
 ## Running the pipeline locally
 ```bash
@@ -148,5 +169,5 @@ GDP, GDPC1, A191RL1Q225SBEA, PI, PCE, DSPI
 | 2 | Static Dashboard (GitHub Pages) | ✅ Complete — all 3 files built, local server tested |
 | 3 | GitHub Actions Automation | ✅ Complete — workflow committed, secret needed in repo |
 | 4 | Apple Calendar Notifications | ✅ Complete — iCal + dashboard panel + workflow integrated |
-| 5 | BLS / BEA / Census Layers | 🔜 Next |
-| 6 | Documentation + Public Launch | ⬜ |
+| 5 | BLS / BEA / Census Layers | ⬜ Deferred — not needed for launch |
+| 6 | Documentation + Public Launch | ✅ Complete — redirect, README, architecture docs, About modal, MIT license |

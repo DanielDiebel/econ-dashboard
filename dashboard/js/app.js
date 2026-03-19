@@ -434,6 +434,32 @@ async function loadReleaseCalendar() {
   }
 }
 
+// ─── About modal ──────────────────────────────────────────────────────────────
+
+function initAboutModal() {
+  const overlay  = document.getElementById('about-modal');
+  const trigger  = document.getElementById('about-trigger');
+  const closeBtn = document.getElementById('modal-close');
+  const copyBtn  = document.getElementById('copy-cal-url');
+  const copyLbl  = document.getElementById('copy-label');
+  const calUrl   = document.getElementById('cal-url-text');
+
+  function openModal()  { overlay.hidden = false; document.body.style.overflow = 'hidden'; }
+  function closeModal() { overlay.hidden = true;  document.body.style.overflow = ''; }
+
+  trigger.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !overlay.hidden) closeModal(); });
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(calUrl.textContent.trim()).then(() => {
+      copyLbl.textContent = 'Copied!';
+      setTimeout(() => { copyLbl.textContent = 'Copy'; }, 2000);
+    });
+  });
+}
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 async function init() {
@@ -456,6 +482,7 @@ async function init() {
 
     setTab('housing');
     loadReleaseCalendar();  // independent — failure doesn't break main dashboard
+    initAboutModal();
 
   } catch (err) {
     document.getElementById('app').innerHTML = `
