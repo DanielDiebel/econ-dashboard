@@ -1,7 +1,7 @@
 # CLAUDE.md — Econ Dashboard State
 
 ## Last updated: 2026-03-18
-## Last session: Phase 2 — Static Dashboard (GitHub Pages)
+## Last session: Phase 3 — GitHub Actions Automation
 
 ---
 
@@ -23,15 +23,14 @@
 - [x] `dashboard/css/style.css` — dark theme, IBM Plex, domain accent colours
 - [x] `dashboard/js/app.js` — Chart.js 4 dashboard, 4 domain tabs, KPI cards, chart, checkboxes
 - [ ] GitHub Pages enabled from `/dashboard` on `main` (Daniel enables in repo Settings)
+- [x] `.github/workflows/fetch-data.yml` — daily cron + Thursday PMMS run + workflow_dispatch
 
 ## What's in progress
-- [ ] Phase 3: GitHub Actions Automation
+- [ ] Phase 4: Apple Calendar Notifications
 
-## What comes next (Phase 3)
-- [ ] Write `.github/workflows/fetch-data.yml`
-- [ ] Add `FRED_API_KEY` secret to GitHub repo
-- [ ] Test cron run
-- [ ] Verify `dashboard_data.json` auto-commits on schedule
+## What comes next (Phase 4)
+- [ ] Design release calendar (key economic release dates)
+- [ ] Build calendar export / notification script
 
 ## Running the pipeline locally
 ```bash
@@ -55,7 +54,7 @@ cd dashboard && python3 -m http.server 8000
 | `dashboard/index.html` | Static site entry point |
 | `dashboard/css/style.css` | Dark theme styles — IBM Plex Mono/Sans, domain colours |
 | `dashboard/js/app.js` | All dashboard logic — Chart.js 4, tabs, KPI cards, chart, checkboxes |
-| `.github/workflows/fetch-data.yml` | GitHub Actions cron (Phase 3 — not yet created) |
+| `.github/workflows/fetch-data.yml` | Daily cron + Thursday PMMS + manual trigger; commits updated JSON |
 
 ## API keys needed
 | Key | Where stored | Variable name | Status |
@@ -106,13 +105,18 @@ GDP, GDPC1, A191RL1Q225SBEA, PI, PCE, DSPI
 
 ## Architecture (current state)
 ```
-[Local] .env (FRED key)
-  → scripts/fetch_fred.py        → data/raw/{series}.csv
+[Local / GitHub Actions] FRED_API_KEY
+  → scripts/fetch_fred.py        → data/raw/{series}.csv  (gitignored)
   → scripts/build_dashboard_data.py
-      → data/processed/dashboard_data.json   (canonical)
-      → dashboard/data/dashboard_data.json   (served by GH Pages)
+      → data/processed/dashboard_data.json   (committed)
+      → dashboard/data/dashboard_data.json   (committed, served by GH Pages)
           → dashboard/index.html + css/ + js/
               → https://danieldiebel.github.io/econ-dashboard
+
+[Automation]
+  .github/workflows/fetch-data.yml
+    cron: weekdays 13:30 UTC + Thursdays 17:00 UTC
+    → runs pipeline → git commit + push → triggers GH Pages rebuild
 ```
 
 ## Known issues / decisions
@@ -129,7 +133,7 @@ GDP, GDPC1, A191RL1Q225SBEA, PI, PCE, DSPI
 | 0 | Repo + Environment Setup | ✅ Complete |
 | 1 | FRED API + Data Pipeline | ✅ Complete — 34/34 series, JSON built |
 | 2 | Static Dashboard (GitHub Pages) | ✅ Complete — all 3 files built, local server tested |
-| 3 | GitHub Actions Automation | 🔜 Next |
-| 4 | Apple Calendar Notifications | ⬜ |
+| 3 | GitHub Actions Automation | ✅ Complete — workflow committed, secret needed in repo |
+| 4 | Apple Calendar Notifications | 🔜 Next |
 | 5 | BLS / BEA / Census Layers | ⬜ |
 | 6 | Documentation + Public Launch | ⬜ |
