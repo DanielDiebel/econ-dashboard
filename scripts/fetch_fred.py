@@ -15,10 +15,8 @@ from fredapi import Fred
 ROOT = Path(__file__).parent.parent
 load_dotenv(ROOT / ".env")
 
-FRED_API_KEY = os.getenv("FRED_API_KEY")
-if not FRED_API_KEY:
-    print("ERROR: FRED_API_KEY not set in .env", file=sys.stderr)
-    sys.exit(1)
+# Key validation lives in main() so importing this module (for SERIES)
+# doesn't trigger sys.exit when FRED_API_KEY isn't needed.
 
 RAW_DIR = ROOT / "data" / "raw"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -93,6 +91,11 @@ def fetch_all(fred):
 
 
 def main():
+    FRED_API_KEY = os.getenv("FRED_API_KEY")
+    if not FRED_API_KEY:
+        print("ERROR: FRED_API_KEY not set in .env", file=sys.stderr)
+        sys.exit(1)
+
     print("Connecting to FRED API...")
     fred = Fred(api_key=FRED_API_KEY)
 
