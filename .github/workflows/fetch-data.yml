@@ -1,5 +1,9 @@
 name: Fetch FRED Data
 
+# Required secrets:
+#   FRED_API_KEY  — FRED / St. Louis Fed (all FRED series + release calendar)
+#   BLS_API_KEY   — BLS v2 API (Portland regional series); optional, falls back to v1
+
 on:
   schedule:
     # Weekdays 1:30 PM UTC (8:30 AM ET) — catches most morning data releases
@@ -39,6 +43,13 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python -W ignore scripts/fetch_fred.py
+
+      - name: Fetch BLS data
+        # BLS is supplementary — FRED data must always succeed, BLS can fail
+        continue-on-error: true
+        env:
+          BLS_API_KEY: ${{ secrets.BLS_API_KEY }}
+        run: python -W ignore scripts/fetch_bls.py
 
       - name: Build dashboard data
         run: python -W ignore scripts/build_dashboard_data.py

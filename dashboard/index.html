@@ -15,7 +15,7 @@
     <header class="site-header">
       <div class="header-brand">
         <h1>US Economic Dashboard</h1>
-        <span class="header-source">FRED · St. Louis Fed</span>
+        <span class="header-source">FRED · BLS · St. Louis Fed</span>
       </div>
       <div class="header-meta">
         <span class="meta-label">Updated</span>
@@ -28,13 +28,15 @@
       <button class="tab-btn" data-domain="labor"      role="tab">Labor</button>
       <button class="tab-btn" data-domain="rates"      role="tab">Rates</button>
       <button class="tab-btn" data-domain="gdp_income" role="tab">GDP &amp; Income</button>
+      <button class="tab-btn" data-domain="regional"   role="tab">Portland</button>
+      <button class="tab-btn tab-btn-glossary" data-domain="glossary" role="tab">Glossary <kbd class="tab-hint">G</kbd></button>
     </nav>
 
-    <section class="kpi-section" aria-label="Key indicators">
+    <section id="kpi-section" class="kpi-section" aria-label="Key indicators">
       <div id="kpi-cards" class="kpi-grid"></div>
     </section>
 
-    <section class="chart-section" aria-label="Chart">
+    <section id="chart-section" class="chart-section" aria-label="Chart">
       <div class="chart-controls">
         <div id="series-checkboxes" class="series-checkboxes"></div>
         <div class="window-buttons" role="group" aria-label="Time window">
@@ -49,6 +51,23 @@
       <p id="chart-note" class="chart-note"></p>
     </section>
 
+    <!-- Glossary panel — hidden until Glossary tab is active -->
+    <section id="glossary-section" class="glossary-section" aria-label="Series Glossary" hidden>
+      <div class="glossary-header">
+        <h2 class="glossary-title">Series Glossary</h2>
+        <input type="search" id="glossary-search" class="glossary-search" placeholder="Search series, descriptions, or IDs…" autocomplete="off">
+        <div id="glossary-domain-filters" class="glossary-domain-filters">
+          <button class="gfilter-btn active" data-filter="all">All</button>
+          <button class="gfilter-btn" data-filter="housing">Housing</button>
+          <button class="gfilter-btn" data-filter="labor">Labor</button>
+          <button class="gfilter-btn" data-filter="rates">Rates</button>
+          <button class="gfilter-btn" data-filter="gdp_income">GDP &amp; Income</button>
+          <button class="gfilter-btn" data-filter="regional">Portland</button>
+        </div>
+      </div>
+      <div id="glossary-grid" class="glossary-grid"></div>
+    </section>
+
     <section class="releases-section" aria-label="Upcoming releases">
       <div class="releases-header">
         <h2 class="releases-title">Upcoming Releases</h2>
@@ -61,7 +80,7 @@
     </section>
 
     <footer class="site-footer">
-      <span>Data: <a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED / St. Louis Fed</a></span>
+      <span>Data: <a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED / St. Louis Fed</a> · <a href="https://www.bls.gov" target="_blank" rel="noopener">BLS</a></span>
       <span class="footer-sep">·</span>
       <span><a href="https://github.com/DanielDiebel/econ-dashboard" target="_blank" rel="noopener">GitHub</a></span>
       <span class="footer-sep">·</span>
@@ -83,14 +102,14 @@
       </div>
       <div class="modal-body">
 
-        <p class="modal-desc">34 key U.S. economic indicators across Housing, Labor, Rates, and GDP &amp; Income — refreshed daily and served as a static site with no backend.</p>
+        <p class="modal-desc">40 economic indicators across Housing, Labor, Rates, GDP &amp; Income, and Portland/Regional — refreshed daily and served as a static site with no backend. Press <kbd>G</kbd> to open the Series Glossary.</p>
 
         <div class="modal-section">
           <h3>Data sources</h3>
           <ul class="modal-list">
-            <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED / St. Louis Fed</a> — all 34 series</li>
+            <li><a href="https://fred.stlouisfed.org" target="_blank" rel="noopener">FRED / St. Louis Fed</a> — 34 national series</li>
+            <li><a href="https://www.bls.gov" target="_blank" rel="noopener">BLS</a> — CPI, payrolls, unemployment + 6 Portland regional series</li>
             <li><a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Freddie Mac</a> — PMMS weekly mortgage rates</li>
-            <li><a href="https://www.bls.gov" target="_blank" rel="noopener">BLS</a> — CPI, payrolls, unemployment</li>
             <li><a href="https://www.bea.gov" target="_blank" rel="noopener">BEA</a> — GDP, PCE, personal income</li>
             <li><a href="https://www.fhfa.gov" target="_blank" rel="noopener">FHFA</a> — House Price Index</li>
             <li><a href="https://www.newyorkfed.org" target="_blank" rel="noopener">NY Fed</a> — SOFR</li>
