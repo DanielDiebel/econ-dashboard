@@ -1,7 +1,7 @@
 # CLAUDE.md — Econ Dashboard State
 
 ## Last updated: 2026-03-18
-## Last session: Phase 3 — GitHub Actions Automation
+## Last session: Phase 4 — Apple Calendar Notifications
 
 ---
 
@@ -24,24 +24,34 @@
 - [x] `dashboard/js/app.js` — Chart.js 4 dashboard, 4 domain tabs, KPI cards, chart, checkboxes
 - [ ] GitHub Pages enabled from `/dashboard` on `main` (Daniel enables in repo Settings)
 - [x] `.github/workflows/fetch-data.yml` — daily cron + Thursday PMMS run + workflow_dispatch
+- [x] `scripts/build_release_calendar.py` — fetches upcoming FRED release dates, writes JSON + iCal
+- [x] `dashboard/data/release_calendar.json` — upcoming releases for dashboard panel
+- [x] `dashboard/release-calendar.ics` — iCal subscription file for Apple Calendar
 
 ## What's in progress
-- [ ] Phase 4: Apple Calendar Notifications
+- [ ] Phase 5: BLS / BEA / Census Layers
 
-## What comes next (Phase 4)
-- [ ] Design release calendar (key economic release dates)
-- [ ] Build calendar export / notification script
+## What comes next (Phase 5)
+- [ ] BLS API integration (detailed jobs data)
+- [ ] BEA API integration (regional GDP, etc.)
+- [ ] Census API integration (housing permits detail)
 
 ## Running the pipeline locally
 ```bash
 source .venv/bin/activate
 python scripts/fetch_fred.py                # fetch raw → data/raw/
 python scripts/build_dashboard_data.py      # build → data/processed/ + dashboard/data/
+python scripts/build_release_calendar.py   # build release_calendar.json + .ics
 
 # Preview dashboard
 cd dashboard && python3 -m http.server 8000
 # open http://localhost:8000
 ```
+
+## Apple Calendar subscription
+- iCal URL (after GitHub Pages): `https://danieldiebel.github.io/econ-dashboard/dashboard/release-calendar.ics`
+- Apple Calendar → File → New Calendar Subscription → paste URL
+- Alerts: 60 min before each release (built into the .ics VALARM)
 
 ## Key file locations
 | File | Purpose |
@@ -54,7 +64,10 @@ cd dashboard && python3 -m http.server 8000
 | `dashboard/index.html` | Static site entry point |
 | `dashboard/css/style.css` | Dark theme styles — IBM Plex Mono/Sans, domain colours |
 | `dashboard/js/app.js` | All dashboard logic — Chart.js 4, tabs, KPI cards, chart, checkboxes |
-| `.github/workflows/fetch-data.yml` | Daily cron + Thursday PMMS + manual trigger; commits updated JSON |
+| `.github/workflows/fetch-data.yml` | Daily cron + Thursday PMMS + manual trigger; commits JSON + iCal |
+| `scripts/build_release_calendar.py` | Fetches FRED release schedule, outputs JSON + RFC-5545 iCal |
+| `dashboard/data/release_calendar.json` | Upcoming release events for dashboard panel |
+| `dashboard/release-calendar.ics` | Apple Calendar subscription file (60-min VALARM per event) |
 
 ## API keys needed
 | Key | Where stored | Variable name | Status |
@@ -134,6 +147,6 @@ GDP, GDPC1, A191RL1Q225SBEA, PI, PCE, DSPI
 | 1 | FRED API + Data Pipeline | ✅ Complete — 34/34 series, JSON built |
 | 2 | Static Dashboard (GitHub Pages) | ✅ Complete — all 3 files built, local server tested |
 | 3 | GitHub Actions Automation | ✅ Complete — workflow committed, secret needed in repo |
-| 4 | Apple Calendar Notifications | 🔜 Next |
-| 5 | BLS / BEA / Census Layers | ⬜ |
+| 4 | Apple Calendar Notifications | ✅ Complete — iCal + dashboard panel + workflow integrated |
+| 5 | BLS / BEA / Census Layers | 🔜 Next |
 | 6 | Documentation + Public Launch | ⬜ |

@@ -359,6 +359,94 @@ a:hover { color: var(--text-1); }
   font-family: var(--font-mono);
 }
 
+/* ── Upcoming releases ──────────────────────────────────────────────────────── */
+.releases-section {
+  padding: 1.5rem 0 0.5rem;
+  border-top: 1px solid var(--border-sub);
+  margin-top: 0.5rem;
+}
+
+.releases-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.releases-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+}
+
+.ics-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.6rem;
+  background: var(--bg-card);
+  transition: all 0.15s;
+}
+
+.ics-link:hover {
+  color: var(--text-1);
+  border-color: var(--text-3);
+}
+
+.release-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.5rem;
+}
+
+.release-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--rel-color, var(--border));
+  border-radius: 5px;
+  padding: 0.6rem 0.75rem;
+}
+
+.release-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rel-color, var(--text-4));
+  flex-shrink: 0;
+}
+
+.release-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.release-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.release-when {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+  margin-top: 0.15rem;
+}
+
+.release-today  { color: var(--up); }
+.release-soon   { color: var(--text-2); }
+
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 .site-footer {
   display: flex;

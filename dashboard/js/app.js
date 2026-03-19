@@ -378,6 +378,62 @@ function setWindow(win) {
   renderChart();
 }
 
+// ─── Release calendar ─────────────────────────────────────────────────────────
+
+const CAL_URL = './data/release_calendar.json';
+
+const CATEGORY_COLORS = {
+  housing:    '#f59e0b',
+  labor:      '#06b6d4',
+  rates:      '#22c55e',
+  gdp_income: '#a855f7',
+};
+
+async function loadReleaseCalendar() {
+  const el = document.getElementById('release-list');
+  try {
+    const res = await fetch(CAL_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const cal = await res.json();
+
+    const now    = new Date();
+    const cutoff = new Date(now.getTime() + 7 * 86400000);  // next 7 days
+
+    const upcoming = cal.releases.filter(ev => {
+      const d = new Date(ev.datetime_utc);
+      return d >= now && d <= cutoff;
+    });
+
+    if (!upcoming.length) {
+      el.innerHTML = '<p style="font-size:0.78rem;color:var(--text-4);padding:0.5rem 0">No releases in the next 7 days.</p>';
+      return;
+    }
+
+    el.innerHTML = upcoming.map(ev => {
+      const color   = CATEGORY_COLORS[ev.category] ?? '#8b949e';
+      const dt      = new Date(ev.datetime_utc);
+      const isToday = dt.toDateString() === now.toDateString();
+      const dayStr  = isToday
+        ? 'Today'
+        : dt.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+      const timeStr = dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+      const whenCls = isToday ? 'release-today' : 'release-soon';
+
+      return `
+        <div class="release-item" style="--rel-color:${color}">
+          <div class="release-dot"></div>
+          <div class="release-info">
+            <div class="release-name">${ev.name}</div>
+            <div class="release-when ${whenCls}">${dayStr} · ${timeStr}</div>
+          </div>
+        </div>`;
+    }).join('');
+
+  } catch (err) {
+    el.innerHTML = `<p style="font-size:0.72rem;color:var(--text-4)">Could not load release calendar.</p>`;
+  }
+}
+
 // ─── Init ─────────────────────────────────────────────────────────────────────
 
 async function init() {
@@ -399,6 +455,7 @@ async function init() {
     document.querySelector('.win-btn[data-window="2yr"]').classList.add('active');
 
     setTab('housing');
+    loadReleaseCalendar();  // independent — failure doesn't break main dashboard
 
   } catch (err) {
     document.getElementById('app').innerHTML = `
