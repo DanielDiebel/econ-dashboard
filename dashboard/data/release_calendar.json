@@ -1,17 +1,9 @@
 {
   "meta": {
-    "updated_at": "2026-04-08T14:52:06Z",
+    "updated_at": "2026-04-09T15:04:14Z",
     "window_days": 30
   },
   "releases": [
-    {
-      "release_id": 18,
-      "name": "Interest Rates (H.15)",
-      "category": "rates",
-      "date": "2026-04-08",
-      "time_et": "16:15",
-      "datetime_utc": "2026-04-08T20:15:00Z"
-    },
     {
       "release_id": 53,
       "name": "GDP",
@@ -35,6 +27,14 @@
       "date": "2026-04-09",
       "time_et": "12:00",
       "datetime_utc": "2026-04-09T16:00:00Z"
+    },
+    {
+      "release_id": 18,
+      "name": "Interest Rates (H.15)",
+      "category": "rates",
+      "date": "2026-04-09",
+      "time_et": "16:15",
+      "datetime_utc": "2026-04-09T20:15:00Z"
     },
     {
       "release_id": 10,
