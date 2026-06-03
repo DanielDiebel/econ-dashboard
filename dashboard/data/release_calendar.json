@@ -1,25 +1,9 @@
 {
   "meta": {
-    "updated_at": "2026-06-02T17:52:02Z",
+    "updated_at": "2026-06-03T18:07:19Z",
     "window_days": 30
   },
   "releases": [
-    {
-      "release_id": 18,
-      "name": "Interest Rates (H.15)",
-      "category": "rates",
-      "date": "2026-06-02",
-      "time_et": "16:15",
-      "datetime_utc": "2026-06-02T20:15:00Z"
-    },
-    {
-      "release_id": 190,
-      "name": "PMMS Mortgage Rates",
-      "category": "housing",
-      "date": "2026-06-04",
-      "time_et": "12:00",
-      "datetime_utc": "2026-06-04T16:00:00Z"
-    },
     {
       "release_id": 50,
       "name": "Employment Situation",
@@ -37,36 +21,12 @@
       "datetime_utc": "2026-06-10T12:30:00Z"
     },
     {
-      "release_id": 190,
-      "name": "PMMS Mortgage Rates",
+      "release_id": 199,
+      "name": "Case-Shiller HPI",
       "category": "housing",
-      "date": "2026-06-11",
-      "time_et": "12:00",
-      "datetime_utc": "2026-06-11T16:00:00Z"
-    },
-    {
-      "release_id": 190,
-      "name": "PMMS Mortgage Rates",
-      "category": "housing",
-      "date": "2026-06-18",
-      "time_et": "12:00",
-      "datetime_utc": "2026-06-18T16:00:00Z"
-    },
-    {
-      "release_id": 54,
-      "name": "Personal Income & Outlays",
-      "category": "gdp_income",
-      "date": "2026-06-25",
-      "time_et": "08:30",
-      "datetime_utc": "2026-06-25T12:30:00Z"
-    },
-    {
-      "release_id": 190,
-      "name": "PMMS Mortgage Rates",
-      "category": "housing",
-      "date": "2026-06-25",
-      "time_et": "12:00",
-      "datetime_utc": "2026-06-25T16:00:00Z"
+      "date": "2026-06-30",
+      "time_et": "09:00",
+      "datetime_utc": "2026-06-30T13:00:00Z"
     },
     {
       "release_id": 50,
@@ -75,14 +35,6 @@
       "date": "2026-07-02",
       "time_et": "08:30",
       "datetime_utc": "2026-07-02T12:30:00Z"
-    },
-    {
-      "release_id": 190,
-      "name": "PMMS Mortgage Rates",
-      "category": "housing",
-      "date": "2026-07-02",
-      "time_et": "12:00",
-      "datetime_utc": "2026-07-02T16:00:00Z"
     }
   ]
 }
