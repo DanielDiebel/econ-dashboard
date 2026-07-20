@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-07-17T14:56:10Z",
+    "updated_at": "2026-07-20T15:26:29Z",
     "window_days": 30
   },
   "releases": [
@@ -8,9 +8,9 @@
       "release_id": 18,
       "name": "Interest Rates (H.15)",
       "category": "rates",
-      "date": "2026-07-17",
+      "date": "2026-07-20",
       "time_et": "16:15",
-      "datetime_utc": "2026-07-17T20:15:00Z"
+      "datetime_utc": "2026-07-20T20:15:00Z"
     },
     {
       "release_id": 190,
