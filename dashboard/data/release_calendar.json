@@ -1,32 +1,16 @@
 {
   "meta": {
-    "updated_at": "2026-07-28T15:40:58Z",
+    "updated_at": "2026-07-29T15:34:27Z",
     "window_days": 30
   },
   "releases": [
     {
-      "release_id": 199,
-      "name": "Case-Shiller HPI",
-      "category": "housing",
-      "date": "2026-07-28",
-      "time_et": "09:00",
-      "datetime_utc": "2026-07-28T13:00:00Z"
-    },
-    {
-      "release_id": 296,
-      "name": "Existing Home Sales",
-      "category": "housing",
-      "date": "2026-07-28",
-      "time_et": "10:00",
-      "datetime_utc": "2026-07-28T14:00:00Z"
-    },
-    {
       "release_id": 18,
       "name": "Interest Rates (H.15)",
       "category": "rates",
-      "date": "2026-07-28",
+      "date": "2026-07-29",
       "time_et": "16:15",
-      "datetime_utc": "2026-07-28T20:15:00Z"
+      "datetime_utc": "2026-07-29T20:15:00Z"
     },
     {
       "release_id": 53,
