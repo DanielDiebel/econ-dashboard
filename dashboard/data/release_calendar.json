@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-08-03T16:03:04Z",
+    "updated_at": "2026-08-04T15:43:53Z",
     "window_days": 30
   },
   "releases": [
@@ -8,9 +8,9 @@
       "release_id": 18,
       "name": "Interest Rates (H.15)",
       "category": "rates",
-      "date": "2026-08-03",
+      "date": "2026-08-04",
       "time_et": "16:15",
-      "datetime_utc": "2026-08-03T20:15:00Z"
+      "datetime_utc": "2026-08-04T20:15:00Z"
     },
     {
       "release_id": 190,
@@ -83,6 +83,14 @@
       "date": "2026-08-27",
       "time_et": "12:00",
       "datetime_utc": "2026-08-27T16:00:00Z"
+    },
+    {
+      "release_id": 190,
+      "name": "PMMS Mortgage Rates",
+      "category": "housing",
+      "date": "2026-09-03",
+      "time_et": "12:00",
+      "datetime_utc": "2026-09-03T16:00:00Z"
     }
   ]
 }
