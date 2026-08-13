@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-08-13T14:35:11Z",
+    "updated_at": "2026-08-13T17:59:17Z",
     "series_count": 36
   },
   "series": {
@@ -10,13 +10,13 @@
       "category": "housing",
       "frequency": "weekly",
       "unit": "%",
-      "latest_value": 6.69,
-      "latest_date": "2026-08-06",
-      "prev_value": 6.66,
-      "prev_date": "2026-07-30",
-      "change": 0.03,
-      "change_pct": 0.4505,
-      "change_bps": 3.0,
+      "latest_value": 6.67,
+      "latest_date": "2026-08-13",
+      "prev_value": 6.69,
+      "prev_date": "2026-08-06",
+      "change": -0.02,
+      "change_pct": -0.299,
+      "change_bps": -2.0,
       "history": [
         {
           "date": "2023-01-05",
@@ -769,6 +769,10 @@
         {
           "date": "2026-08-06",
           "value": 6.69
+        },
+        {
+          "date": "2026-08-13",
+          "value": 6.67
         }
       ]
     },
@@ -778,13 +782,13 @@
       "category": "housing",
       "frequency": "weekly",
       "unit": "%",
-      "latest_value": 6.01,
-      "latest_date": "2026-08-06",
-      "prev_value": 6.04,
-      "prev_date": "2026-07-30",
-      "change": -0.03,
-      "change_pct": -0.4967,
-      "change_bps": -3.0,
+      "latest_value": 5.96,
+      "latest_date": "2026-08-13",
+      "prev_value": 6.01,
+      "prev_date": "2026-08-06",
+      "change": -0.05,
+      "change_pct": -0.8319,
+      "change_bps": -5.0,
       "history": [
         {
           "date": "2023-01-05",
@@ -1537,6 +1541,10 @@
         {
           "date": "2026-08-06",
           "value": 6.01
+        },
+        {
+          "date": "2026-08-13",
+          "value": 5.96
         }
       ]
     },
