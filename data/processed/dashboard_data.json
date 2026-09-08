@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-09-07T18:18:34Z",
+    "updated_at": "2026-09-08T17:19:15Z",
     "series_count": 36
   },
   "series": {
@@ -36488,13 +36488,13 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 3.66,
-      "latest_date": "2026-09-03",
-      "prev_value": 3.65,
-      "prev_date": "2026-09-02",
-      "change": 0.01,
-      "change_pct": 0.274,
-      "change_bps": 1.0,
+      "latest_value": 3.65,
+      "latest_date": "2026-09-04",
+      "prev_value": 3.66,
+      "prev_date": "2026-09-03",
+      "change": -0.01,
+      "change_pct": -0.2732,
+      "change_bps": -1.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -40163,6 +40163,10 @@
         {
           "date": "2026-09-03",
           "value": 3.66
+        },
+        {
+          "date": "2026-09-04",
+          "value": 3.65
         }
       ]
     },
