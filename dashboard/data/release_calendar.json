@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-10-23T17:54:58Z",
+    "updated_at": "2026-10-26T19:27:58Z",
     "window_days": 30
   },
   "releases": [
@@ -8,9 +8,9 @@
       "release_id": 18,
       "name": "Interest Rates (H.15)",
       "category": "rates",
-      "date": "2026-10-23",
+      "date": "2026-10-26",
       "time_et": "16:15",
-      "datetime_utc": "2026-10-23T20:15:00Z"
+      "datetime_utc": "2026-10-26T20:15:00Z"
     },
     {
       "release_id": 199,
@@ -91,6 +91,38 @@
       "date": "2026-11-19",
       "time_et": "12:00",
       "datetime_utc": "2026-11-19T17:00:00Z"
+    },
+    {
+      "release_id": 199,
+      "name": "Case-Shiller HPI",
+      "category": "housing",
+      "date": "2026-11-24",
+      "time_et": "09:00",
+      "datetime_utc": "2026-11-24T14:00:00Z"
+    },
+    {
+      "release_id": 53,
+      "name": "GDP",
+      "category": "gdp_income",
+      "date": "2026-11-25",
+      "time_et": "08:30",
+      "datetime_utc": "2026-11-25T13:30:00Z"
+    },
+    {
+      "release_id": 54,
+      "name": "Personal Income & Outlays",
+      "category": "gdp_income",
+      "date": "2026-11-25",
+      "time_et": "08:30",
+      "datetime_utc": "2026-11-25T13:30:00Z"
+    },
+    {
+      "release_id": 190,
+      "name": "PMMS Mortgage Rates",
+      "category": "housing",
+      "date": "2026-11-25",
+      "time_et": "12:00",
+      "datetime_utc": "2026-11-25T17:00:00Z"
     }
   ]
 }
