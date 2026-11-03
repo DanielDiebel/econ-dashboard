@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-11-02T22:23:43Z",
+    "updated_at": "2026-11-03T20:11:07Z",
     "series_count": 36
   },
   "series": {
@@ -5061,12 +5061,12 @@
       "category": "labor",
       "frequency": "monthly",
       "unit": "thousands",
-      "latest_value": 7079.0,
-      "latest_date": "2026-08-01",
-      "prev_value": 7335.0,
-      "prev_date": "2026-07-01",
-      "change": -256.0,
-      "change_pct": -3.4901,
+      "latest_value": 7523.0,
+      "latest_date": "2026-09-01",
+      "prev_value": 7190.0,
+      "prev_date": "2026-08-01",
+      "change": 333.0,
+      "change_pct": 4.6314,
       "history": [
         {
           "date": "2023-01-01",
@@ -5242,7 +5242,11 @@
         },
         {
           "date": "2026-08-01",
-          "value": 7079.0
+          "value": 7190.0
+        },
+        {
+          "date": "2026-09-01",
+          "value": 7523.0
         }
       ]
     },
@@ -38009,12 +38013,12 @@
       "frequency": "daily",
       "unit": "%",
       "latest_value": 3.95,
-      "latest_date": "2026-10-30",
-      "prev_value": 3.94,
-      "prev_date": "2026-10-29",
-      "change": 0.01,
-      "change_pct": 0.2538,
-      "change_bps": 1.0,
+      "latest_date": "2026-11-02",
+      "prev_value": 3.95,
+      "prev_date": "2026-10-30",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_bps": 0.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -41838,6 +41842,10 @@
         },
         {
           "date": "2026-10-30",
+          "value": 3.95
+        },
+        {
+          "date": "2026-11-02",
           "value": 3.95
         }
       ]
