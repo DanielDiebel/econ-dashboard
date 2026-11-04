@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-11-03T20:11:11Z",
+    "updated_at": "2026-11-04T20:28:56Z",
     "window_days": 30
   },
   "releases": [
@@ -8,9 +8,9 @@
       "release_id": 18,
       "name": "Interest Rates (H.15)",
       "category": "rates",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "time_et": "16:15",
-      "datetime_utc": "2026-11-03T21:15:00Z"
+      "datetime_utc": "2026-11-04T21:15:00Z"
     },
     {
       "release_id": 190,
@@ -91,6 +91,14 @@
       "date": "2026-12-03",
       "time_et": "12:00",
       "datetime_utc": "2026-12-03T17:00:00Z"
+    },
+    {
+      "release_id": 50,
+      "name": "Employment Situation",
+      "category": "labor",
+      "date": "2026-12-04",
+      "time_et": "08:30",
+      "datetime_utc": "2026-12-04T13:30:00Z"
     }
   ]
 }
