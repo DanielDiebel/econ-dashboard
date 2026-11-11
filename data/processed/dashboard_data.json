@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-11-10T20:30:59Z",
+    "updated_at": "2026-11-11T20:16:21Z",
     "series_count": 36
   },
   "series": {
@@ -5289,9 +5289,9 @@
       "frequency": "daily",
       "unit": "%",
       "latest_value": 3.88,
-      "latest_date": "2026-11-06",
+      "latest_date": "2026-11-09",
       "prev_value": 3.88,
-      "prev_date": "2026-11-05",
+      "prev_date": "2026-11-08",
       "change": 0.0,
       "change_pct": 0.0,
       "change_bps": 0.0,
@@ -10919,6 +10919,18 @@
         {
           "date": "2026-11-06",
           "value": 3.88
+        },
+        {
+          "date": "2026-11-07",
+          "value": 3.88
+        },
+        {
+          "date": "2026-11-08",
+          "value": 3.88
+        },
+        {
+          "date": "2026-11-09",
+          "value": 3.88
         }
       ]
     },
@@ -11128,12 +11140,12 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 4.86,
-      "latest_date": "2026-11-06",
-      "prev_value": 4.84,
-      "prev_date": "2026-11-05",
+      "latest_value": 4.88,
+      "latest_date": "2026-11-09",
+      "prev_value": 4.86,
+      "prev_date": "2026-11-06",
       "change": 0.02,
-      "change_pct": 0.4132,
+      "change_pct": 0.4115,
       "change_bps": 2.0,
       "history": [
         {
@@ -14987,6 +14999,10 @@
         {
           "date": "2026-11-06",
           "value": 4.86
+        },
+        {
+          "date": "2026-11-09",
+          "value": 4.88
         }
       ]
     },
@@ -14996,12 +15012,12 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 4.51,
-      "latest_date": "2026-11-06",
-      "prev_value": 4.46,
-      "prev_date": "2026-11-05",
+      "latest_value": 4.56,
+      "latest_date": "2026-11-09",
+      "prev_value": 4.51,
+      "prev_date": "2026-11-06",
       "change": 0.05,
-      "change_pct": 1.1211,
+      "change_pct": 1.1086,
       "change_bps": 5.0,
       "history": [
         {
@@ -18855,6 +18871,10 @@
         {
           "date": "2026-11-06",
           "value": 4.51
+        },
+        {
+          "date": "2026-11-09",
+          "value": 4.56
         }
       ]
     },
@@ -18864,13 +18884,13 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 4.64,
-      "latest_date": "2026-11-06",
-      "prev_value": 4.59,
-      "prev_date": "2026-11-05",
-      "change": 0.05,
-      "change_pct": 1.0893,
-      "change_bps": 5.0,
+      "latest_value": 4.67,
+      "latest_date": "2026-11-09",
+      "prev_value": 4.64,
+      "prev_date": "2026-11-06",
+      "change": 0.03,
+      "change_pct": 0.6466,
+      "change_bps": 3.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -22723,6 +22743,10 @@
         {
           "date": "2026-11-06",
           "value": 4.64
+        },
+        {
+          "date": "2026-11-09",
+          "value": 4.67
         }
       ]
     },
@@ -22733,12 +22757,12 @@
       "frequency": "daily",
       "unit": "%",
       "latest_value": 5.26,
-      "latest_date": "2026-11-06",
-      "prev_value": 5.25,
-      "prev_date": "2026-11-05",
-      "change": 0.01,
-      "change_pct": 0.1905,
-      "change_bps": 1.0,
+      "latest_date": "2026-11-09",
+      "prev_value": 5.26,
+      "prev_date": "2026-11-06",
+      "change": 0.0,
+      "change_pct": 0.0,
+      "change_bps": 0.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -26591,6 +26615,10 @@
         {
           "date": "2026-11-06",
           "value": 5.26
+        },
+        {
+          "date": "2026-11-09",
+          "value": 5.26
         }
       ]
     },
@@ -26600,13 +26628,13 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 4.01,
-      "latest_date": "2026-11-06",
-      "prev_value": 4.0,
-      "prev_date": "2026-11-05",
-      "change": 0.01,
-      "change_pct": 0.25,
-      "change_bps": 1.0,
+      "latest_value": 4.06,
+      "latest_date": "2026-11-09",
+      "prev_value": 4.01,
+      "prev_date": "2026-11-06",
+      "change": 0.05,
+      "change_pct": 1.2469,
+      "change_bps": 5.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -30459,6 +30487,10 @@
         {
           "date": "2026-11-06",
           "value": 4.01
+        },
+        {
+          "date": "2026-11-09",
+          "value": 4.06
         }
       ]
     },
@@ -30468,13 +30500,13 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 0.32,
-      "latest_date": "2026-11-09",
-      "prev_value": 0.35,
-      "prev_date": "2026-11-06",
-      "change": -0.03,
-      "change_pct": -8.5714,
-      "change_bps": -3.0,
+      "latest_value": 0.25,
+      "latest_date": "2026-11-10",
+      "prev_value": 0.32,
+      "prev_date": "2026-11-09",
+      "change": -0.07,
+      "change_pct": -21.875,
+      "change_bps": -7.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -34331,6 +34363,10 @@
         {
           "date": "2026-11-09",
           "value": 0.32
+        },
+        {
+          "date": "2026-11-10",
+          "value": 0.25
         }
       ]
     },
@@ -34340,13 +34376,13 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 0.64,
-      "latest_date": "2026-11-09",
-      "prev_value": 0.67,
-      "prev_date": "2026-11-06",
-      "change": -0.03,
-      "change_pct": -4.4776,
-      "change_bps": -3.0,
+      "latest_value": 0.68,
+      "latest_date": "2026-11-10",
+      "prev_value": 0.64,
+      "prev_date": "2026-11-09",
+      "change": 0.04,
+      "change_pct": 6.25,
+      "change_bps": 4.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -38203,6 +38239,10 @@
         {
           "date": "2026-11-09",
           "value": 0.64
+        },
+        {
+          "date": "2026-11-10",
+          "value": 0.68
         }
       ]
     },
