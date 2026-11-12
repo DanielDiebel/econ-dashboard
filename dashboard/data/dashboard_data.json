@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-11-11T20:16:21Z",
+    "updated_at": "2026-11-12T20:59:07Z",
     "series_count": 36
   },
   "series": {
@@ -10,13 +10,13 @@
       "category": "housing",
       "frequency": "weekly",
       "unit": "%",
-      "latest_value": 7.18,
-      "latest_date": "2026-11-05",
-      "prev_value": 7.24,
-      "prev_date": "2026-10-29",
-      "change": -0.06,
-      "change_pct": -0.8287,
-      "change_bps": -6.0,
+      "latest_value": 7.11,
+      "latest_date": "2026-11-12",
+      "prev_value": 7.18,
+      "prev_date": "2026-11-05",
+      "change": -0.07,
+      "change_pct": -0.9749,
+      "change_bps": -7.0,
       "history": [
         {
           "date": "2023-01-05",
@@ -821,6 +821,10 @@
         {
           "date": "2026-11-05",
           "value": 7.18
+        },
+        {
+          "date": "2026-11-12",
+          "value": 7.11
         }
       ]
     },
@@ -830,13 +834,13 @@
       "category": "housing",
       "frequency": "weekly",
       "unit": "%",
-      "latest_value": 6.57,
-      "latest_date": "2026-11-05",
-      "prev_value": 6.6,
-      "prev_date": "2026-10-29",
-      "change": -0.03,
-      "change_pct": -0.4545,
-      "change_bps": -3.0,
+      "latest_value": 6.45,
+      "latest_date": "2026-11-12",
+      "prev_value": 6.57,
+      "prev_date": "2026-11-05",
+      "change": -0.12,
+      "change_pct": -1.8265,
+      "change_bps": -12.0,
       "history": [
         {
           "date": "2023-01-05",
@@ -1641,6 +1645,10 @@
         {
           "date": "2026-11-05",
           "value": 6.57
+        },
+        {
+          "date": "2026-11-12",
+          "value": 6.45
         }
       ]
     },
@@ -2235,17 +2243,13 @@
       "category": "housing",
       "frequency": "monthly",
       "unit": "number",
-      "latest_value": 3990000.0,
-      "latest_date": "2026-09-01",
-      "prev_value": 3930000.0,
-      "prev_date": "2026-08-01",
-      "change": 60000.0,
-      "change_pct": 1.5267,
+      "latest_value": 3750000.0,
+      "latest_date": "2026-10-01",
+      "prev_value": 3970000.0,
+      "prev_date": "2026-09-01",
+      "change": -220000.0,
+      "change_pct": -5.5416,
       "history": [
-        {
-          "date": "2025-09-01",
-          "value": 4080000.0
-        },
         {
           "date": "2025-10-01",
           "value": 4110000.0
@@ -2292,7 +2296,11 @@
         },
         {
           "date": "2026-09-01",
-          "value": 3990000.0
+          "value": 3970000.0
+        },
+        {
+          "date": "2026-10-01",
+          "value": 3750000.0
         }
       ]
     },
@@ -4278,12 +4286,12 @@
       "category": "labor",
       "frequency": "weekly",
       "unit": "number",
-      "latest_value": 189000.0,
-      "latest_date": "2026-10-31",
-      "prev_value": 195000.0,
-      "prev_date": "2026-10-24",
-      "change": -6000.0,
-      "change_pct": -3.0769,
+      "latest_value": 200000.0,
+      "latest_date": "2026-11-07",
+      "prev_value": 191000.0,
+      "prev_date": "2026-10-31",
+      "change": 9000.0,
+      "change_pct": 4.712,
       "history": [
         {
           "date": "2023-01-07",
@@ -5083,7 +5091,11 @@
         },
         {
           "date": "2026-10-31",
-          "value": 189000.0
+          "value": 191000.0
+        },
+        {
+          "date": "2026-11-07",
+          "value": 200000.0
         }
       ]
     },
@@ -38252,13 +38264,13 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 3.88,
-      "latest_date": "2026-11-09",
-      "prev_value": 3.89,
-      "prev_date": "2026-11-06",
-      "change": -0.01,
-      "change_pct": -0.2571,
-      "change_bps": -1.0,
+      "latest_value": 3.89,
+      "latest_date": "2026-11-10",
+      "prev_value": 3.88,
+      "prev_date": "2026-11-09",
+      "change": 0.01,
+      "change_pct": 0.2577,
+      "change_bps": 1.0,
       "history": [
         {
           "date": "2023-01-03",
@@ -42107,6 +42119,10 @@
         {
           "date": "2026-11-09",
           "value": 3.88
+        },
+        {
+          "date": "2026-11-10",
+          "value": 3.89
         }
       ]
     },
