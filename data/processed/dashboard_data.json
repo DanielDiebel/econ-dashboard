@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-11-12T22:39:05Z",
+    "updated_at": "2026-11-13T20:34:22Z",
     "series_count": 36
   },
   "series": {
@@ -3689,16 +3689,16 @@
       "category": "labor",
       "frequency": "monthly",
       "unit": "index",
-      "latest_value": 159.78,
-      "latest_date": "2026-09-01",
-      "prev_value": 157.662,
-      "prev_date": "2026-08-01",
-      "change": 2.118,
-      "change_pct": 1.3434,
-      "yoy_value": 150.245,
-      "yoy_date": "2025-09-01",
-      "yoy_change": 9.535,
-      "yoy_change_pct": 6.3463,
+      "latest_value": 160.254,
+      "latest_date": "2026-10-01",
+      "prev_value": 159.699,
+      "prev_date": "2026-09-01",
+      "change": 0.555,
+      "change_pct": 0.3475,
+      "yoy_value": 150.439,
+      "yoy_date": "2025-10-01",
+      "yoy_change": 9.815,
+      "yoy_change_pct": 6.5242,
       "history": [
         {
           "date": "2023-01-01",
@@ -3866,19 +3866,23 @@
         },
         {
           "date": "2026-06-01",
-          "value": 156.683
+          "value": 156.675
         },
         {
           "date": "2026-07-01",
-          "value": 156.924
+          "value": 156.834
         },
         {
           "date": "2026-08-01",
-          "value": 157.662
+          "value": 157.482
         },
         {
           "date": "2026-09-01",
-          "value": 159.78
+          "value": 159.699
+        },
+        {
+          "date": "2026-10-01",
+          "value": 160.254
         }
       ]
     },
@@ -38300,12 +38304,12 @@
       "category": "rates",
       "frequency": "daily",
       "unit": "%",
-      "latest_value": 3.89,
-      "latest_date": "2026-11-10",
-      "prev_value": 3.88,
-      "prev_date": "2026-11-09",
+      "latest_value": 3.9,
+      "latest_date": "2026-11-12",
+      "prev_value": 3.89,
+      "prev_date": "2026-11-10",
       "change": 0.01,
-      "change_pct": 0.2577,
+      "change_pct": 0.2571,
       "change_bps": 1.0,
       "history": [
         {
@@ -42159,6 +42163,10 @@
         {
           "date": "2026-11-10",
           "value": 3.89
+        },
+        {
+          "date": "2026-11-12",
+          "value": 3.9
         }
       ]
     },
